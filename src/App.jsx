@@ -1,9 +1,14 @@
+import { useState } from "react";
+import { StateContext } from "./Context/StateContext";
 import Layout from "./Layout";
 
 function App() {
+  const states = {};
   return (
     <>
-      <Layout />
+      <StateContext.Provider value={states}>
+        <Layout />
+      </StateContext.Provider>
     </>
   );
 }

@@ -5,6 +5,7 @@ import Rightside from "./components/Shared/Rightside";
 
 import bg from "./assets/bg.jpg";
 import navbg1 from "./assets/bg-nav-3.png";
+import { Outlet } from "react-router-dom";
 export default function Layout() {
   return (
     <>
@@ -35,19 +36,9 @@ export default function Layout() {
               <div className="relative">
                 <Leftside />
               </div>
-              <div className="">
-                <Rightside />
-                <h1>dsag</h1>
-                <h1>dsag</h1>
-                <h1>dsag</h1>
-                <h1>dsag</h1>
-                <h1>dsag</h1>
-                <h1>dsag</h1>
-                <h1>dsag</h1>
-                <h1>dsag</h1>
-                <h1>dsag</h1>
-                <h1>dsag</h1>
-                <h1>dsag</h1>
+              <div className="flex-1">
+                <Outlet />
+                {/* <Rightside /> */}
               </div>
             </div>
           </div>
