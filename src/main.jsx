@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./components/Auth/Login.jsx";
 import Register from "./components/Auth/Register.jsx";
+import Findjob from "./components/Pages/Findjob.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/find-jobs",
-        element: <h1>hello</h1>,
+        element: <Findjob />,
       },
       {
         path: "/login",
@@ -28,10 +29,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-  // {
-  //   path: "/find-jobs",
-  //   element: <h2>sdafg</h2>,
-  // },
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
