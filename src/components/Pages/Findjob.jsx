@@ -5,7 +5,7 @@ import JobCard from "../../Card/JobCard";
 export default function Findjob() {
   const { isLoading, data, isError, error } = useQuery({
     queryKey: ["alljobs"],
-    queryFn: () => axios.get(`http://localhost:5000/jobs`),
+    queryFn: () => axios.get(`https://career-compass-theta.vercel.app/jobs`),
   });
   console.log(data);
   if (isLoading) return <h1>Loading...</h1>;

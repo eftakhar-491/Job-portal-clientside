@@ -10,7 +10,8 @@ export default function JobDetails() {
   console.log(id);
   const { data, isLoading, isError } = useQuery({
     queryKey: ["jobs", id],
-    queryFn: () => axios.get(`http://localhost:5000/jobs/${id}`),
+    queryFn: () =>
+      axios.get(`https://career-compass-theta.vercel.app/jobs/${id}`),
   });
   console.log(data);
   if (isLoading) {

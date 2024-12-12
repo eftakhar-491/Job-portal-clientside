@@ -21,7 +21,7 @@ export default function Register() {
         <div className="">
           <form
             onSubmit={handelregister}
-            className="backdrop-blur-sm bg-slate-800/20 border py-14 mt-3 px-6 mx-auto max-w-96 rounded-lg flex flex-col justify-center items-center text-white"
+            className="shadow-2xl backdrop-blur-sm bg-slate-800/20 border py-12 mt-3 px-6 mx-auto max-w-96 rounded-lg flex flex-col justify-center items-center text-white"
           >
             <label className="text-2xl font-bold">Register</label>
             <label className="w-full">
@@ -59,14 +59,37 @@ export default function Register() {
               <input
                 required={true}
                 className="border-b-2 mb-5 bg-transparent py-2 outline-none pl-5 w-full focus:border-blue-400 "
-                type="Password"
+                type="password"
                 name="pass"
                 placeholder="Password"
               />
             </label>
+            <label className="font-bold">Create Account As</label>
+            <label
+              for="hr"
+              className="flex mr-auto mb-2 flex-row items-center gap-2.5"
+            >
+              <input id="hr" type="checkbox" className="peer hidden" />
+              <div
+                for="hr"
+                className="h-5 w-5 flex rounded-md border border-white  peer-checked:bg-white transition"
+              ></div>
+              teacher
+            </label>
+            <label
+              for="hr2"
+              className="flex mr-auto mb-2 flex-row items-center gap-2.5"
+            >
+              <input id="hr" type="checkbox" className="peer hidden" />
+              <div
+                for="hr2"
+                className="h-5 w-5 flex rounded-md border border-white  peer-checked:bg-white transition"
+              ></div>
+              std
+            </label>
             <button
               type="submit"
-              className="border w-full py-1 rounded-lg active:scale-95 "
+              className="mt-3 border w-full py-1 rounded-lg active:scale-95 "
             >
               Create Account
             </button>
