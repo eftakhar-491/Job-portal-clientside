@@ -7,7 +7,7 @@ export default function Leftside() {
 
   return (
     <>
-      <div className="sticky top-[144px] backdrop-blur-[2px] shadow-lg bg-slate-800/20 w-[250px] text-white rounded-xl p-6 md:flex hidden flex-col">
+      <div className="shadow-2xl sticky top-[144px] backdrop-blur-[2px] bg-slate-800/20 w-[250px] text-white rounded-xl p-6 md:flex hidden flex-col">
         <div className=" h-9 flex border-2 pr-1 rounded-lg">
           <input
             className="w-11/12 text-sm outline-none pl-2 bg-transparent"

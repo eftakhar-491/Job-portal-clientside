@@ -5,7 +5,7 @@ export default function JobCard({ data }) {
   const navigate = useNavigate();
   return (
     <>
-      <div className=" border p-4 rounded-md flex-1 min-w-[300px] backdrop-blur-sm bg-slate-800/20 shadow-xl">
+      <div className="shadow-2xl border p-4 rounded-md flex-1 min-w-[300px] backdrop-blur-sm bg-slate-800/20 ">
         <div className="flex items-center gap-2">
           <img className="w-16 h-16" src={data?.company_logo} alt="" />
           <div>

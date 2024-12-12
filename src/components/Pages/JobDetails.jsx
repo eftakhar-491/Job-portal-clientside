@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import ApplyJobModal from "../Modal/ApplyJobModal";
 
 export default function JobDetails() {
+  const [applyModl, setApplyModal] = useState(false);
   const { id } = useParams();
   console.log(id);
   const { data, isLoading, isError } = useQuery({
@@ -14,12 +16,21 @@ export default function JobDetails() {
   if (isLoading) {
     return <h1>loading...</h1>;
   }
-
+  if (isError) {
+    return <h1>error</h1>;
+  }
+  function handelapply(e) {
+    e.preventDefault();
+    setApplyModal(true);
+  }
   return (
     <>
-      <section className="rounded-lg text-white bg-slate-800/20 backdrop-blur-sm">
+      {applyModl && (
+        <ApplyJobModal applyModl={applyModl} setApplyModal={setApplyModal} />
+      )}
+      <section className="shadow-2xl rounded-lg text-white bg-slate-800/20 backdrop-blur-sm">
         <h1 className="text-2xl font-bold pl-4 pt-4 ">Job Details</h1>
-        <p className=" pl-4 text-[12px]">
+        <p className=" pl-4 text-[12px] mb-4">
           Make sure your skils are matched either please don't apply !
         </p>
         <div className="p-4 ">
@@ -56,7 +67,12 @@ export default function JobDetails() {
           <h3 className="mt-3">HR Name : {data.data.hr_name}</h3>
           <h4>HR Email : {data.data.hr_email}</h4>
           <h5>Last date of Application: {data.data.applicationDeadline}</h5>
-          <button className="px-4 py-1 border rounded mt-4">Apply Now</button>
+          <button
+            onClick={handelapply}
+            className="px-4 py-1 border rounded mt-4"
+          >
+            Apply Now
+          </button>
         </div>
       </section>
     </>

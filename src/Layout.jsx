@@ -25,7 +25,7 @@ export default function Layout() {
             rgba(0, 0, 0, 0.0)), 
               url(${navbg1})`,
           }}
-          className="z-20 bg-cover bg-bottom h-36  mx-auto  sticky top-0"
+          className=" z-20 bg-cover bg-bottom h-36  mx-auto  sticky top-0"
         >
           <Nav />
         </header>
